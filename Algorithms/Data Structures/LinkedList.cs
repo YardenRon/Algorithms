@@ -29,7 +29,7 @@ namespace Algorithms.Data_Structures
             Head = null;
         }
 
-        // Run time: 
+        // Run time: O(1)
         public void insert(T value)
         {
             Node<T> newNode = new Node<T>(value);
@@ -42,7 +42,7 @@ namespace Algorithms.Data_Structures
             Head = newNode;
         }
 
-        // Run time: 
+        // Run time: O(n)
         public void delete(T value)
         {
             Node<T> current = Head;
@@ -60,7 +60,7 @@ namespace Algorithms.Data_Structures
             }
         }
 
-        // Run time: 
+        // Run time: O(n)
         public Node<T> search(T value)
         {
             Node<T> current = Head;
