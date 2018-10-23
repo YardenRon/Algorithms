@@ -45,18 +45,23 @@ namespace Algorithms.Data_Structures
         // Run time: O(n)
         public void delete(T value)
         {
-            Node<T> current = Head;
-            bool found = false;
+            Node<T> result = search(value);
 
-            while (current != null || !found)
+            if (result != null)
             {
-                if (current.Value.CompareTo(value) == 0)
+                if (result.Prev != null)
                 {
-                    current.Prev.Next = current.Next;
-                    current.Next.Prev = current.Prev;
-                    found = true;
+                    result.Prev.Next = result.Next;
                 }
-                current = current.Next;
+                else
+                {
+                    Head = result.Next;
+                }
+
+                if (result.Next != null)
+                {
+                    result.Next.Prev = result.Prev;
+                }
             }
         }
 
