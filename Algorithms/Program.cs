@@ -57,30 +57,64 @@ namespace Algorithms
             #endregion
 
             #region Stack
-            Data_Structures.Stack<int> stack = new Data_Structures.Stack<int>(5);
-            Console.WriteLine("Stack empty = " + stack.isEmpty());
+            //Data_Structures.Stack<int> stack = new Data_Structures.Stack<int>(5);
+            //Console.WriteLine("Stack empty = " + stack.isEmpty());
+            //try
+            //{
+            //    stack.pop();
+            //}
+            //catch (Exception exception)
+            //{
+            //    Console.WriteLine(exception.Message);
+            //}
+            //stack.push(1);
+            //stack.push(2);
+            //stack.push(3);
+            //stack.push(4);
+            //stack.push(5);
+            //stack.push(6);
+            //Console.WriteLine("Stack empty = " + stack.isEmpty());
+
+            //Console.WriteLine(stack.pop());
+            //Console.WriteLine(stack.pop());
+            //Console.WriteLine(stack.pop());
+            //Console.WriteLine(stack.pop());
+            //Console.WriteLine(stack.pop());
+            //Console.WriteLine(stack.pop());
+            //Console.ReadLine();
+            #endregion
+
+            #region Queue
+            Data_Structures.Queue<int> queue = new Data_Structures.Queue<int>(5);
             try
             {
-                stack.pop();
+                int test = queue.dequeue();
             }
-            catch (Exception exception)
+            catch (Exception ex)
             {
-                Console.WriteLine(exception.Message);
+                Console.WriteLine(ex.Message);
             }
-            stack.push(1);
-            stack.push(2);
-            stack.push(3);
-            stack.push(4);
-            stack.push(5);
-            stack.push(6);
-            Console.WriteLine("Stack empty = " + stack.isEmpty());
 
-            Console.WriteLine(stack.pop());
-            Console.WriteLine(stack.pop());
-            Console.WriteLine(stack.pop());
-            Console.WriteLine(stack.pop());
-            Console.WriteLine(stack.pop());
-            Console.WriteLine(stack.pop());
+            queue.enqueue(1);
+            queue.enqueue(2);
+            queue.enqueue(3);
+            queue.enqueue(4);
+            queue.enqueue(5);
+
+            try
+            {
+                queue.enqueue(6);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.WriteLine(queue.dequeue());
+            Console.WriteLine(queue.dequeue());
+            Console.WriteLine(queue.dequeue());
+            Console.WriteLine(queue.dequeue());
+            Console.WriteLine(queue.dequeue());
             Console.ReadLine();
             #endregion
         }
