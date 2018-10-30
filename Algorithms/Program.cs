@@ -85,37 +85,42 @@ namespace Algorithms
             #endregion
 
             #region Queue
-            Data_Structures.Queue<int> queue = new Data_Structures.Queue<int>(5);
-            try
-            {
-                int test = queue.dequeue();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            //Data_Structures.Queue<int> queue = new Data_Structures.Queue<int>(5);
+            //try
+            //{
+            //    int test = queue.dequeue();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
 
-            queue.enqueue(1);
-            queue.enqueue(2);
-            queue.enqueue(3);
-            queue.enqueue(4);
-            queue.enqueue(5);
+            //queue.enqueue(1);
+            //queue.enqueue(2);
+            //queue.enqueue(3);
+            //queue.enqueue(4);
+            //queue.enqueue(5);
 
-            try
-            {
-                queue.enqueue(6);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            //try
+            //{
+            //    queue.enqueue(6);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
 
-            Console.WriteLine(queue.dequeue());
-            Console.WriteLine(queue.dequeue());
-            Console.WriteLine(queue.dequeue());
-            Console.WriteLine(queue.dequeue());
-            Console.WriteLine(queue.dequeue());
-            Console.ReadLine();
+            //Console.WriteLine(queue.dequeue());
+            //Console.WriteLine(queue.dequeue());
+            //Console.WriteLine(queue.dequeue());
+            //Console.WriteLine(queue.dequeue());
+            //Console.WriteLine(queue.dequeue());
+            //Console.ReadLine();
+            #endregion
+
+            #region MergeSort
+            int[] array = { 4, 5, 3, 2 , 1, 7, 9, 5, 3, 10, 1, 5, 4, 3};
+            Sorts.MergeSort.mergeSort(array, 0, 13);
             #endregion
         }
 
