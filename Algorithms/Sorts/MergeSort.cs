@@ -13,8 +13,7 @@ namespace Algorithms.Sorts
      *              2. it execute merge sort recursively on both subarrays
      *              3. it merges the 2 sorted subarrays into one sorted array
      * Run time:
-     * - worst case:
-     * - avg case:
+     * - worst case: O(nlogn)
      */
     class MergeSort
     {
